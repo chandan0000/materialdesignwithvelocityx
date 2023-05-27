@@ -17,9 +17,9 @@ class M2 extends StatelessWidget {
         child: Column(
           children: [
             // cleneder view
-            const CalenderView().p24().h(
-                  context.percentHeight * 30,
-                ),
+            const CalenderView()
+                .p24()
+                .h(context.percentHeight * (Vx.isWeb ? 33 : 30)),
             // music player view
             const MusicPlayerView().p24(),
             // chat view
@@ -112,7 +112,7 @@ class MusicPlayerView extends StatelessWidget {
           HStack(
             [
               const Text("1:20").text.make(),
-              Spacer(),
+              const Spacer(),
               const Text("3:20").text.make(),
             ],
           ).px24(),
